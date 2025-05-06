@@ -7,6 +7,7 @@
 **gallery-viewer-web** is an Angular-based web application designed to enhance the user experience when viewing gallery file images (third-party product). It serves as a image viewer, offering features like:
 
 - 🖼️ Image carousel navigation with keyboard support
+- 🔍 Zoom
 - 📂 Organized gallery and scene grouping  
 - 🧭 Pagination and sorting for large collections  
 - 📥 JSON import support for gallery data
