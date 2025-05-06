@@ -65,6 +65,10 @@ export class HomeComponent implements OnInit, AfterViewChecked {
     }
   }
 
+  pondHandleRemoveFile(event: any) {
+    this.json = null;
+  }
+
   load() {
     try {
       const galleries = (this.json as any[]).map(item => this.parseGallery(item)).filter(g => g.scenes && g.scenes.find(g => g.filesCount > 0));
@@ -111,7 +115,8 @@ export class HomeComponent implements OnInit, AfterViewChecked {
       width: '70vw',
       maxHeight: '90vh',
       data: { files: fileUrls },
-      autoFocus: false
+      autoFocus: false,
+      backdropClass: 'blurred-expanded-image-dialog-backdrop',
     });
   }
 

@@ -70,7 +70,7 @@
 
 .menu .menu-header .text-logo {
   font-family: var(--default-font-family);
-  color: #ff002b;
+  color: var(--third-accent-color);
   font-weight: 600;
   letter-spacing: -0.2px;
   font-size: 18px;

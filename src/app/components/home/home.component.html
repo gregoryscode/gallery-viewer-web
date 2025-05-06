@@ -11,11 +11,13 @@
     </mat-form-field>
 
     <div class="filepond">
-      <file-pond #productPond [options]="pondOptions" (onaddfile)="pondHandleAddFile($event)">
+      <file-pond #productPond [options]="pondOptions" (onaddfile)="pondHandleAddFile($event)" (onremovefile)="pondHandleRemoveFile($event)">
       </file-pond>
     </div>
 
-    <button mat-raised-button class="load-button" (click)="load()" [class.disabled]="form.invalid || !json" [disabled]="form.invalid || !json">Load</button>
+    <button mat-raised-button class="load-button" (click)="load()" [class.disabled]="form.invalid || !json" [disabled]="form.invalid || !json">
+      <mat-icon class="material-symbols-outlined" matPrefix>bolt</mat-icon>
+      Process</button>
 
     <mat-divider></mat-divider>
 
@@ -39,8 +41,8 @@
         <ng-container matColumnDef="actions">
           <mat-header-cell *matHeaderCellDef> </mat-header-cell>
           <mat-cell *matCellDef="let element">
-            <button mat-icon-button (click)="openGalleryDialog(element)">
-              <mat-icon>visibility</mat-icon>
+            <button mat-icon-button (click)="openGalleryDialog(element)" matTooltip="View" matTooltipPosition="before">
+              <mat-icon >visibility</mat-icon>
             </button>
           </mat-cell>
         </ng-container>
