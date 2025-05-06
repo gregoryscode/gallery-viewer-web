@@ -1,8 +1,10 @@
 <h2 mat-dialog-title>Gallery Files</h2>
-
 <div class="dialog-body">
   <div *ngIf="files.length > 0" class="carousel-container">
-    <img [src]="files[currentIndex]" class="carousel-image" />
+    <div class="carousel-image">
+      <lib-ngx-image-zoom [thumbImage]="files[currentIndex]" [fullImage]="files[currentIndex]" [enableScrollZoom]="true" [scrollStepSize]="0.2" zoomMode="hover"></lib-ngx-image-zoom>
+    </div>
+
 
     <div class="navigation-buttons">
       <button mat-icon-button (click)="previous()" [disabled]="currentIndex === 0">

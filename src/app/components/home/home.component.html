@@ -8,7 +8,6 @@
       <mat-label>Url</mat-label>
       <input matInput id="url" formControlName="url" autocomplete="off" aria-autocomplete="none" placeholder="Url do local dos arquivos" title="">
       <mat-icon matSuffix matTooltipPosition="right">link</mat-icon>
-      <mat-error *ngIf="url.errors?.['required']">Este campo é obrigatório</mat-error>
     </mat-form-field>
 
     <div class="filepond">
@@ -16,7 +15,11 @@
       </file-pond>
     </div>
 
-    <div class="galeries" *ngIf="dataSource?.data?.length">
+    <button mat-raised-button class="load-button" (click)="load()" [class.disabled]="form.invalid || !json" [disabled]="form.invalid || !json">Load</button>
+
+    <mat-divider></mat-divider>
+
+    <div class="galleries" *ngIf="dataSource?.data?.length">
       <table mat-table [dataSource]="dataSource" class="mat-elevation-z2" matSort>
         <ng-container matColumnDef="_id">
           <mat-header-cell *matHeaderCellDef> ID </mat-header-cell>

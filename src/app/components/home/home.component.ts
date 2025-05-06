@@ -16,18 +16,19 @@ export class HomeComponent implements OnInit, AfterViewChecked {
   @ViewChild(MatPaginator, { static: false }) paginator!: MatPaginator;
   pondOptions = {
     class: 'postPond',
-    credits: false,
-    multiple: true,
+    multiple: false,
     allowPaste: false,
     imagePreviewHeight: 150,
     imagePreviewMaxHeight: 150,
     acceptedFileTypes: ['application/json'],
     maxFileSize: '2MB',
+    labelIdle: 'Drag & Drop your JSON file or <span class="filepond--label-action"> Browse </span>'
   };
   displayedColumns: string[] = ['_id', 'partnerId', 'slug', 'actions'];
   dataSource: MatTableDataSource<Gallery> = new MatTableDataSource<Gallery>();
   paginatorInitialized = false;
   form!: FormGroup;
+  json: any;
 
   constructor(
     private dialog: MatDialog,
@@ -58,12 +59,19 @@ export class HomeComponent implements OnInit, AfterViewChecked {
 
     try {
       const text = await file.text();
-      const rawData = JSON.parse(text);
-      const galleries = (rawData as any[]).map(item => this.parseGallery(item)).filter(g => g.scenes && g.scenes.find(g => g.filesCount > 0));
+      this.json = JSON.parse(text);
+    } catch (error) {
+      console.error('Failed to parse JSON:', error);
+    }
+  }
+
+  load() {
+    try {
+      const galleries = (this.json as any[]).map(item => this.parseGallery(item)).filter(g => g.scenes && g.scenes.find(g => g.filesCount > 0));
       this.dataSource = new MatTableDataSource(galleries);
       this.paginatorInitialized = false;
     } catch (error) {
-      console.error('Failed to parse JSON:', error);
+      console.error('Failed to load JSON data:', error);
     }
   }
 
@@ -102,7 +110,8 @@ export class HomeComponent implements OnInit, AfterViewChecked {
     this.dialog.open(GalleryFilesDialogComponent, {
       width: '70vw',
       maxHeight: '90vh',
-      data: { files: fileUrls }
+      data: { files: fileUrls },
+      autoFocus: false
     });
   }
 

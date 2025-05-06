@@ -36,6 +36,7 @@ body::-webkit-scrollbar-thumb
     --secondary-color: #525252;
     --accent-color: #b52623;
     --secondary-accent-color: #d35553;
+    --third-accent-color: #ff002b;
     --primary-gray-color: #ADADAD;
     --secondary-gray-color: #626C6C;
     --darker-text-color: #152323;

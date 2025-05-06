@@ -7,6 +7,7 @@
 .home-container .header {
   display: flex;
   flex-direction: column;
+  margin-bottom: 6px;
 }
 
 .home-container .header .title {
@@ -30,20 +31,34 @@
   border-color: #d4d4d4;
 }
 
-.home-container .loading {
-  margin-top: 16px;
-  border-radius: 10px !important;
-}
-
 .home-container .content {
   width: 100%;
   display: flex;
   flex-direction: column;
+  margin-top: 10px;
+}
+
+.home-container .content .load-button {
+  border-radius: 30px;
+  font-family: var(--default-font-family);
+  letter-spacing: 0.2px;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.home-container .content .load-button.disabled {
+background-color: #cccccc;
+}
+
+.home-container .content mat-divider {
   margin-top: 16px;
 }
 
-.mat-column-actions {
-  
+.home-container .content .galleries {
+  margin-top: 16px;
+}
+
+.mat-column-actions {  
   width: 100%;
   display: flex;
   align-items: flex-end;
@@ -51,12 +66,15 @@
 }
 
 ::ng-deep .filepond--panel-root {
-  background-color: #adadad;
-
+  background-color: #cccccc;
 }
 
 ::ng-deep  .filepond--drop-label {
-  color: #fefefe;
+  color: #ffffff;
+}
+
+::ng-deep .filepond--label-action {
+  color: #858080;
 }
 
 .field {

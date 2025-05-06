@@ -32,6 +32,7 @@
     "ng2-currency-mask": "^13.0.3",
     "ngx-file-helpers": "^10.0.0",
     "ngx-filepond": "^7.0.3",
+    "ngx-image-zoom": "^3.0.0",
     "ngx-mask": "^14.0.3",
     "ngx-skeleton-loader": "^6.0.0",
     "ngx-spinner": "^16.0.2",

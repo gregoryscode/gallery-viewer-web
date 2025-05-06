@@ -32,7 +32,7 @@
 }
 
 .menu .panel-body li a:hover {
-  background-color: var(--secondary-accent-color);
+  background-color: var(--third-accent-color);
   border-radius: 5px;
 }
 
@@ -68,6 +68,15 @@
   max-height: 50px;
 }
 
+.menu .menu-header .text-logo {
+  font-family: var(--default-font-family);
+  color: #ff002b;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+  font-size: 18px;
+  user-select: none;
+}
+
 .menu .menu-header .btn-close {
   display: none;
 }
@@ -101,7 +110,7 @@
   margin-left: 14px;
   font-family: 'Roboto';
   font-size: 12px;
-  color: var(--secondary-accent-color);
+  color: var(--third-accent-color);
 }
 
 .title {

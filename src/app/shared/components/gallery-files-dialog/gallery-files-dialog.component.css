@@ -1,30 +1,65 @@
 .carousel-container {
-    text-align: center;
-  }
+  text-align: center;
+}
 
-  .carousel-image {
-    width: 100%;
-    max-height: 500px;
-    object-fit: contain;
-  }
+.carousel-image {
+  border-radius: 10px;
+}
 
-  .navigation-buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-    gap: 1rem;
-  }
-  
-  .no-files {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    margin-bottom: 16px;
-  }
 
-  .no-files span {
-    color: rgb(228, 90, 71);
-    font-size: 16px;
-    font-weight: 500;
-  }
+/* Added to work with image zoom gallery */
+:host ::ng-deep .ngxImageZoomContainer>img {
+  max-height: 850px !important;
+  border-radius: 10px;
+  /* max-width: 650px !important; */
+}
+
+/* Added to work with image zoom gallery */
+:host ::ng-deep .ngxImageZoomLensEnabled {
+  border-color: #8D8D8D !important;
+}
+
+/* Added to work with image zoom gallery */
+:host ::ng-deep .ngxImageZoomThumbnail {
+  cursor: zoom-in !important;
+}
+
+/* Added to work with image zoom gallery */
+:host ::ng-deep .g-box gallery-image .g-image-item {
+  background-image: none !important;
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 16px;
+  gap: 1rem;
+}
+
+.navigation-buttons span {
+  color: #fefefe;
+  font-family: var(--default-font-family);
+}
+
+.navigation-buttons mat-icon {
+  color: #fefefe;
+}
+
+.navigation-buttons button:disabled {
+  opacity: 0.4;
+}
+
+.no-files {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.no-files span {
+  color: rgb(228, 90, 71);
+  font-size: 16px;
+  font-weight: 500;
+}

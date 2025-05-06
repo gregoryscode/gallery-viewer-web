@@ -9,6 +9,7 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 export class GalleryFilesDialogComponent {
   files: string[] = [];
   currentIndex = 0;
+  zoomed = false;
 
   constructor(@Inject(MAT_DIALOG_DATA) public data: { files: string[] }) {
     this.files = data.files;
@@ -36,5 +37,9 @@ export class GalleryFilesDialogComponent {
     if (this.currentIndex > 0) {
       this.currentIndex--;
     }
+  }
+
+  toggleZoom() {
+    this.zoomed = !this.zoomed;
   }
 }

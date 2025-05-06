@@ -37,6 +37,7 @@ import * as FilePondPluginFileValidateType from 'filepond-plugin-file-validate-t
 import * as FilePondPluginFileValidateSize from 'filepond-plugin-file-validate-size';
 import * as FilePondPluginFileEncode from 'filepond-plugin-file-encode';
 import * as FilePondPluginImagePreview from 'filepond-plugin-image-preview';
+import { NgxImageZoomModule } from 'ngx-image-zoom';
 
 /* Components */
 import { AppComponent } from './app.component';
@@ -95,7 +96,8 @@ registerPlugin(FilePondPluginImagePreview);
     MatPaginatorModule,
     NgxFileHelpersModule,
     FilePondModule,
-    NgxSkeletonLoaderModule
+    NgxSkeletonLoaderModule,
+    NgxImageZoomModule
   ],
   providers: [
     // { provide: LOCALE_ID, useValue: 'pt-BR' },
