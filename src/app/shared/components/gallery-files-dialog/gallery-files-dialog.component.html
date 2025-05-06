@@ -1,0 +1,21 @@
+<h2 mat-dialog-title>Gallery Files</h2>
+
+<div class="dialog-body">
+  <div *ngIf="files.length > 0" class="carousel-container">
+    <img [src]="files[currentIndex]" class="carousel-image" />
+
+    <div class="navigation-buttons">
+      <button mat-icon-button (click)="previous()" [disabled]="currentIndex === 0">
+        <mat-icon>chevron_left</mat-icon>
+      </button>
+      <span>{{ currentIndex + 1 }} / {{ files.length }}</span>
+      <button mat-icon-button (click)="next()" [disabled]="currentIndex === files.length - 1">
+        <mat-icon>chevron_right</mat-icon>
+      </button>
+    </div>
+  </div>
+
+  <div class="no-files" *ngIf="files.length === 0">
+    <span>No files found for this gallery.</span>
+  </div>
+</div>

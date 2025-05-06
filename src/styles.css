@@ -1,0 +1,212 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat' !important;
+    background-color: #eee;
+    /* overflow: hidden; */
+}
+
+body::-webkit-scrollbar-track
+{
+    background: #eee;
+}
+
+body::-webkit-scrollbar
+{
+	width: 12px;
+}
+
+body::-webkit-scrollbar-thumb
+{
+    background: var(--primary-gray-color);
+    border-radius: 1rem;
+    border: 4px #eee solid;
+}
+
+:root {
+    --default-font-family: 'Montserrat', sans-serif;
+    --secondary-font-family: 'Roboto', sans-serif;
+    --primary-color: #F4F4F4;
+    --secondary-color: #525252;
+    --accent-color: #b52623;
+    --secondary-accent-color: #d35553;
+    --primary-gray-color: #ADADAD;
+    --secondary-gray-color: #626C6C;
+    --darker-text-color: #152323;
+    --dark-text-color: #444F4F;
+    --disabled-color: #C0C0C0;
+    --dark-fab-button-color: #363740;
+    --search-field-width: 500px;
+}
+
+.account-menu .mat-mdc-menu-item {
+    width: 200px !important;
+    padding-left: 20px !important;
+    overflow-x: hidden !important;
+}
+
+/* progress bar */
+.mat-mdc-progress-bar {
+    --mdc-linear-progress-active-indicator-color: var(--accent-color);
+    --mdc-linear-progress-track-color: #b5252398;
+}
+
+/* mat-select background color */
+.mat-mdc-select-panel {
+    background-color: #ffffff !important;
+}
+
+/* mat-autocomplete background color */
+.mat-mdc-autocomplete-panel {
+    background-color: #ffffff !important;
+}
+
+.mat-mdc-paginator {
+    --mat-paginator-container-background-color: #ffffff !important;
+    --mat-paginator-container-text-color: var(--secondary-color) !important;
+    --mat-paginator-enabled-icon-color: var(--secondary-color) !important;
+    --mat-paginator-disabled-icon-color: var(--disabled-color) !important;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    border-top: 1px solid #d1d1d1;
+}
+
+/* snackbar */
+.cdk-overlay-pane {
+   /* pointer-events: none !important; */
+}
+
+.mat-mdc-snack-bar-container {
+    pointer-events: auto !important;
+    margin-top: 74px !important;
+    margin-right: 8px !important;
+}
+
+.snackbar-default {
+    --mdc-snackbar-supporting-text-color: var(--primary-color);
+    --mat-snack-bar-button-color: var(--primary-color);
+}
+
+.snackbar-default .mdc-snackbar__surface {
+    --mdc-snackbar-container-color: var(--secondary-color);
+}
+
+.snackbar-success {
+    --mdc-snackbar-supporting-text-color: var(--secondary-color);
+    --mat-snack-bar-button-color: var(--secondary-color);
+}
+
+.snackbar-success .mdc-snackbar__surface {
+    --mdc-snackbar-container-color: #7bce6a;
+}
+
+.snackbar-error {
+    --mdc-snackbar-supporting-text-color: var(--primary-color);
+    --mat-snack-bar-button-color: var(--primary-color);
+}
+
+.snackbar-error .mdc-snackbar__surface {
+    --mdc-snackbar-container-color: #cc6262;
+}
+
+.snackbar-warning {
+    --mdc-snackbar-supporting-text-color: var(--primary-color);
+    --mat-snack-bar-button-color: var(--primary-color);
+}
+
+.snackbar-warning .mdc-snackbar__surface {
+    --mdc-snackbar-container-color: #f1a644;
+}
+
+/* removing browser's default visibility icon on password fields */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear,
+input[type="password"]::-webkit-clear-button,
+input[type="password"]::-webkit-inner-spin-button,
+input[type="password"]::-webkit-outer-spin-button,
+input[type="password"]::-webkit-textfield-decoration-container {
+    display: none;
+}
+
+/* calendar setup */
+.mat-calendar {
+    /* date hover background color */
+    --mat-datepicker-calendar-date-hover-state-background-color: var(--secondary-accent-color);
+    /* current date background color */
+    --mat-datepicker-calendar-date-focus-state-background-color: var(--accent-color) !important;
+    /* current date border color */
+    --mat-datepicker-calendar-date-today-outline-color: var(--accent-color) !important;
+}
+
+/* selected date on date picker*/
+.mat-calendar-body-selected {
+    /* background color*/
+    --mat-datepicker-calendar-date-selected-state-background-color: var(--accent-color) !important;
+    /* text color */
+    --mat-datepicker-calendar-date-selected-state-text-color: #152323 !important;
+}
+
+/* translate icon places on form inputs */
+.translate-icon {
+    /* margin-right: 5px; */
+    font-size: 22px;
+    height: 22px;
+    width: 22px;
+}
+
+.translate-icon:hover {
+    cursor: pointer;
+}
+
+.column-translate {
+    display: flex;
+    align-items: center;
+}
+
+.td-translate:hover mat-icon {    
+    opacity: 1;
+    visibility: visible;
+}
+
+.column-translate mat-icon {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+    background-color: #f1f1f1;
+    border-radius: 4px;
+    padding: 2px;
+    margin-left: 6px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.column-translate mat-icon:hover {
+    cursor: pointer;
+}
+
+::ng-deep .mat-mdc-dialog-content
+
+
+::ng-deep .mat-mdc-dialog-content::-webkit-scrollbar-track
+{
+    background: #eee;
+}
+
+::ng-deep .mat-mdc-dialog-content::-webkit-scrollbar
+{
+	width: 12px;
+}
+
+::ng-deep .mat-mdc-dialog-content::-webkit-scrollbar-thumb
+{
+    background: var(--primary-gray-color);
+    border-radius: 1rem;
+    border: 4px #eee solid;
+}

@@ -1,0 +1,30 @@
+.carousel-container {
+    text-align: center;
+  }
+
+  .carousel-image {
+    width: 100%;
+    max-height: 500px;
+    object-fit: contain;
+  }
+
+  .navigation-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    gap: 1rem;
+  }
+  
+  .no-files {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+
+  .no-files span {
+    color: rgb(228, 90, 71);
+    font-size: 16px;
+    font-weight: 500;
+  }

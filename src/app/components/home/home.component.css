@@ -1,0 +1,83 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.home-container .header {
+  display: flex;
+  flex-direction: column;
+}
+
+.home-container .header .title {
+  font-size: 22px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, .55);
+}
+
+.home-container .header .subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, .55);
+  letter-spacing: -0.3px;
+  margin-top: 5px;
+}
+
+.home-container .header-divider {
+  width: 100%;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  border-color: #d4d4d4;
+}
+
+.home-container .loading {
+  margin-top: 16px;
+  border-radius: 10px !important;
+}
+
+.home-container .content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+}
+
+.mat-column-actions {
+  
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+::ng-deep .filepond--panel-root {
+  background-color: #adadad;
+
+}
+
+::ng-deep  .filepond--drop-label {
+  color: #fefefe;
+}
+
+.field {
+  /* outline color */
+  --mdc-outlined-text-field-outline-color: #585858;
+  /* focus outline color */
+  --mdc-outlined-text-field-focus-outline-color: var(--accent-color);
+  /* focus label color */
+  --mdc-outlined-text-field-focus-label-text-color: var(--accent-color);
+  /* cursor color */
+  --mdc-outlined-text-field-caret-color: #a3a3a3;
+  /* placeholder color */
+  --mdc-outlined-text-field-input-text-placeholder-color: var(--secondary-color);
+  /* hover outline color */
+  --mdc-outlined-text-field-hover-outline-color: var(--primary-gray-color);
+  /* label not focused color */
+  --mdc-outlined-text-field-label-text-color: var(--secondary-color);
+  /* input text color */
+  --mdc-outlined-text-field-input-text-color: var(--secondary-color);
+  /* calendar icon color */
+  --mat-datepicker-toggle-icon-color: var(--secondary-color);
+  /* calendar icon active color */
+  --mat-datepicker-toggle-active-state-icon-color: var(--accent-color);
+}

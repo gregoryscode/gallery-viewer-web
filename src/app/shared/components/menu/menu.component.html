@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="menu">
+        <ul>
+            <div class="menu-header">
+                <a href=""><img src="assets/img/img_logo.png"></a>
+            </div>
+
+            <li class="first-items" *ngFor="let item of menuHomeItems">
+                <a [routerLink]="[item.route]" routerLinkActive="active">
+                    <mat-icon *ngIf="item.icon" class="material-symbols-rounded">{{ item.icon }}</mat-icon>
+                    <span class="title">{{ item.title }}</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

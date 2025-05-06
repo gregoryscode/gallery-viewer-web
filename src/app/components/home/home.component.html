@@ -1,0 +1,51 @@
+<div class="home-container">
+  <div class="header">
+    <span class="title">GALLERY FILES VIEWER</span>
+  </div>
+  <mat-divider class="header-divider"></mat-divider>
+  <div class="content" [formGroup]="form">
+    <mat-form-field class="field field-large" appearance="outline" hideRequiredMarker>
+      <mat-label>Url</mat-label>
+      <input matInput id="url" formControlName="url" autocomplete="off" aria-autocomplete="none" placeholder="Url do local dos arquivos" title="">
+      <mat-icon matSuffix matTooltipPosition="right">link</mat-icon>
+      <mat-error *ngIf="url.errors?.['required']">Este campo é obrigatório</mat-error>
+    </mat-form-field>
+
+    <div class="filepond">
+      <file-pond #productPond [options]="pondOptions" (onaddfile)="pondHandleAddFile($event)">
+      </file-pond>
+    </div>
+
+    <div class="galeries" *ngIf="dataSource?.data?.length">
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z2" matSort>
+        <ng-container matColumnDef="_id">
+          <mat-header-cell *matHeaderCellDef> ID </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{ element._id }} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="partnerId">
+          <mat-header-cell *matHeaderCellDef> Partner ID </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{ element.partnerId }} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="slug">
+          <mat-header-cell *matHeaderCellDef> Slug </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{ element.slug }} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="actions">
+          <mat-header-cell *matHeaderCellDef> </mat-header-cell>
+          <mat-cell *matCellDef="let element">
+            <button mat-icon-button (click)="openGalleryDialog(element)">
+              <mat-icon>visibility</mat-icon>
+            </button>
+          </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+      </table>
+      <mat-paginator pageSize="20" hidePageSize showFirstLastButtons></mat-paginator>
+    </div>
+  </div>
+</div>
