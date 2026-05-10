@@ -27,6 +27,10 @@ This project is no longer receiving updates. It remains available for reference,
 
 Gregory Perozzo.
 
-<h2>License</h2>
+## License
 
 Copyright (c) Gregory Perozzo. All rights reserved.
+
+This project is publicly available for portfolio and reference purposes only.
+
+See the [LICENSE](./LICENSE) file for full terms.
