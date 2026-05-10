@@ -15,6 +15,10 @@
 - Pagination and sorting for large collections.
 - JSON import support for gallery data.
 
+## Related projects
+
+- [`gallery-ui-preview-web`](https://github.com/your-user/gallery-ui-preview-web) — Angular-based UI preview created as a stakeholder-driven design and flow evaluation for Go image’s photography-focused digital ecosystem.
+
 <h2>Project status</h2>
 
 This project is no longer receiving updates. It remains available for reference, but no new features, optimizations, or UI enhancements are planned.
