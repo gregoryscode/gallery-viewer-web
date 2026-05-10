@@ -9,11 +9,11 @@
 
 <h2>Features</h2>
 
-- Image carousel navigation with keyboard support
-- Zoom and fullscreen preview
-- Organized gallery and scene grouping
-- Pagination and sorting for large collections
-- JSON import support for gallery data
+- Image carousel navigation with keyboard support.
+- Zoom and fullscreen preview.
+- Organized gallery and scene grouping.
+- Pagination and sorting for large collections.
+- JSON import support for gallery data.
 
 <h2>Project status</h2>
 
@@ -21,7 +21,7 @@ This project is no longer receiving updates. It remains available for reference,
 
 <h2>Developers</h2>
 
-Gregory Perozzo
+Gregory Perozzo.
 
 <h2>License</h2>
 
